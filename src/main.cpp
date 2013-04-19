@@ -24,6 +24,11 @@
 //#define LOG 
 //#define DBG
 
+/**
+  * test git
+  */
+
+
 using namespace std;
 
 list<ALConstraintGraph> iterative_segment( ALConstraintGraph *alg, LanguageModel *l , int threshold ) ;
