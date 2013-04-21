@@ -40,6 +40,7 @@ class ALConstraintGraph {
 		virtual void delEdge( int m , int  n );
 
 		vector<string> toCSPString( int no ) const;
+		vector<string> toMAPString( int no ) const;
 		void exportToFile( const char * csppath, const char * mappath ) const ;
 		void exportToFile( string csppath, string mappath ) const {
 			exportToFile( csppath.c_str() , mappath.c_str());

@@ -110,6 +110,21 @@ ALConstraintGraph::toCSPString( int no ) const {
 }
 
 
+vector<string> 
+ALConstraintGraph::toMAPString( int no ) const {
+	vector<string> strings;
+	ostringstream stream; 
+	stream << vexnum << " # " << no << endl;
+	for( int sub = 0 ; sub < vertices.size(); sub++) {
+        stream <<  sub  << " " << vertices.at(sub).getName() << endl ;
+	}
+	strings.push_back( stream.str() );
+	strings.push_back( string(".\n"));
+	return strings;
+}
+
+
+
 void 
 ALConstraintGraph::exportToFile( const char * csp_path, const char * map_path ) const{
 	ofstream ocsp_file, omap_file;

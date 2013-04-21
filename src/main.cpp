@@ -61,12 +61,12 @@ main(int argc, char *argv[]) {
 		//alg.exportToFile("f3deleted.csp", "n3deleted.map");
 #endif
 #if 1
-	ConstraintNetwork cn( "./newcsp/fma.csp", "./newcsp/fma.map", &lm);
+	ConstraintNetwork cn( "./newcsp/fma1.csp", "./newcsp/fma1.map", &lm);
 	ALConstraintGraph alg( &cn, &lm);
-	alg.exportToFile( "./newcsp/fma1.csp" , "./newcsp/fma1.map" ); 
+	//alg.exportToFile( "./newcsp/fma1.csp" , "./newcsp/fma1.map" ); 
     list<ALConstraintGraph> graphs = iterative_segment( &alg, &lm, 1000 );
     MultiCSPFile mcf( &graphs );
-	mcf.exportToFile("fmasegmented.csp");
+	mcf.exportToFile("./newcsp/fmasegmented.csp", "./newcsp/fmasegmented.map");
     
 #endif
 

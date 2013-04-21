@@ -12,7 +12,7 @@ class MultiCSPFile {
 	public :
 		MultiCSPFile( list<ALConstraintGraph> * p ) { lptr = p ; }
 
-		void exportToFile( const char * csppath ) const;
+		void exportToFile( const char * csppath, const char * mappath ) const;
 	private :
 		list<ALConstraintGraph> * lptr;
 };
